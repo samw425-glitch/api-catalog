@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  api:
+    build: .
+    container_name: api-dev
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+      - APP_VERSION=dev-local
+    volumes:
+      - ./api:/app
